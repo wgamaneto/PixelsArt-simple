@@ -29,17 +29,21 @@
   background-color: green;
 }
 
-body {
-  justify-items: center;
+#color-palette {
+  display: flex;
+  justify-content: center;
 }
+
 .color {
   width: 150px;
   height: 150px;
   display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 40px;
   margin-bottom: 20px;
   border: 1px solid black;
-  
+
 }
 
 
@@ -47,6 +51,8 @@ body {
   width: 210px;
   height: 300px;
   display: flex;
+  align-content: center;
+  margin-left: 250px;
   flex-direction: row;
   flex-wrap: wrap;
 }

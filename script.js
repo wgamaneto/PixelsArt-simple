@@ -1,8 +1,16 @@
-function aplicarCor(event) {
-    let clicado = document.querySelector('.selected')
-    let cor = clicado.style.backgroundColor
-    event.target.style.backgroundColor = cor;
+window.onload = function(){
+    let inicioPreto = document.querySelector('.color')
+    inicioPreto.classList.add('selected')
 }
+
+function aplicarCor(event) {
+    let selecionado = document.querySelector('.selected')
+    let cor = selecionado.style.backgroundColor
+    console.log(selecionado.id);
+    event.target.style.backgroundColor = selecionado.id;
+}
+
+
 
 
 let quadrados = document.getElementById('pixel-board')
@@ -35,7 +43,3 @@ azul.addEventListener('click', cor)
 verde.addEventListener('click', cor)
 
 
-window.onload = function(){
-    let inicioPreto = document.querySelector('.color')
-    inicioPreto.classList.add('selected')
-}
