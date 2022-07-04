@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+   
+}
+
+#color-palette {
+    height: 200px;
+    width: auto;
+    display: grid;
+    background-color: black;
+}
+
+.color {
+
+}
