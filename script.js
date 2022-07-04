@@ -1,14 +1,41 @@
-let paleta = document.getElementsByClassName('color');
-console.log(paleta)
-paleta[1].style.backgroundColor = 'red'
-paleta[2].style.backgroundColor = 'blue'
-paleta[3].style.backgroundColor = 'green'
+function aplicarCor(event) {
+    let clicado = document.querySelector('.selected')
+    let cor = clicado.style.backgroundColor
+    event.target.style.backgroundColor = cor;
+}
 
 
 let quadrados = document.getElementById('pixel-board')
-for (let index = 1; index <= 5; index += 1){
-        let criarDivs = document.getElementById('div');
-        criarDivs.className = 'pixel'
-        quadrados.appendChild(criarDivs)
-    }   
-    
+for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 5; i += 1) {
+        let criarDiv = document.createElement('div');
+        criarDiv.className = 'pixel';
+        criarDiv.addEventListener('click', aplicarCor)
+        quadrados.appendChild(criarDiv);
+    }
+}
+
+let preto = document.getElementsByClassName('color')[0]
+let vermelho = document.getElementsByClassName('color')[1]
+let azul = document.getElementsByClassName('color')[2]
+let verde = document.getElementsByClassName('color')[3]
+
+
+
+function cor(event) {
+    let select = document.querySelector('.selected')
+    select.classList.remove('selected')
+    event.target.classList.add('selected')
+}
+
+
+preto.addEventListener('click', cor)
+vermelho.addEventListener('click', cor)
+azul.addEventListener('click', cor)
+verde.addEventListener('click', cor)
+
+
+window.onload = function(){
+    let inicioPreto = document.querySelector('.color')
+    inicioPreto.classList.add('selected')
+}
