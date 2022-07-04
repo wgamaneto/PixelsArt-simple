@@ -1,30 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #title {
-    margin-top: 10px;
-    text-align: center;
-   
+  margin-top: 10px;
+  text-align: center;
+
 }
 
 #color-palette {
-    margin-top: 150px;
-    margin-left: 300px;
-    height: 500px;
-    width: 500px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    
+  margin-top: 150px;
+  margin-left: 300px;
+  height: 100px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+
 }
+
 .cor1 {
-    background-color: black;
+  background-color: black;
 }
 
 .color {
-    border: 1px solid black;
-    margin-right: 10px;
+  border: 1px solid black;
+  margin-right: 10px;
 
+}
+
+#pixel-board {
+  height: 40px;
+  width: 40px;
+  
+
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: 1px solid black;
 }
