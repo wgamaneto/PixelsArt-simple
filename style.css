@@ -51,8 +51,7 @@
   width: 210px;
   height: 300px;
   display: flex;
-  align-content: center;
-  margin-left: 250px;
+  margin-left: 300px;
   flex-direction: row;
   flex-wrap: wrap;
 }
