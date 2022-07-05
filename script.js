@@ -31,11 +31,16 @@ function pintar(event) {
 }
 
 let colors = document.getElementsByClassName('color');
-colors[0].style.backgroundColor = 'black';
-colors[1].style.backgroundColor = 'blue'
-colors[2].style.backgroundColor = 'red';
-colors[3].style.backgroundColor = 'green';
 
+function gerarCor()
+{
+    let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
+colors[0].style.backgroundColor = 'black';
+colors[1].style.backgroundColor = gerarCor()
+colors[2].style.backgroundColor = gerarCor()
+colors[3].style.backgroundColor = gerarCor()
 
 function escolhido(event) {
     for (let index in colors) {
