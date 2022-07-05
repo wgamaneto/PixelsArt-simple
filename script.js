@@ -30,8 +30,12 @@ function pintar(event) {
     event.target.style.backgroundColor = selectedColor;
 }
 
-let px = document.getElementsByClassName('pixel');
 let colors = document.getElementsByClassName('color');
+colors[0].style.backgroundColor = 'black';
+colors[1].style.backgroundColor = 'blue'
+colors[2].style.backgroundColor = 'red';
+colors[3].style.backgroundColor = 'green';
+
 
 function escolhido(event) {
     for (let index in colors) {
@@ -46,16 +50,13 @@ for (let index = 0; index < colors.length; index += 1) {
     colors[index].addEventListener('click', escolhido);
 }
 
-let corRandom = `${'rgb' + '('}${Math.floor(Math.random() * 255)}`
+let corRandom = (Math.floor(Math.random() * 255))
 console.log(corRandom);
 
-colors[0].style.backgroundColor = 'black';
-colors[1].style.backgroundColor = 'blue'
-colors[2].style.backgroundColor = 'red';
-colors[3].style.backgroundColor = 'green';
 
 
 
+let px = document.getElementsByClassName('pixel');
 let limpar = document.getElementById('clear-board');
 function clearBoard() {
     for (let index = 0; index < px.length; index += 1) {
