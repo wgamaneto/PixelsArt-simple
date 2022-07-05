@@ -67,7 +67,7 @@ function clearBoard() {
 }
 limpar.addEventListener('click', clearBoard); 
 
-btnVqv.addEventListener('click', tamanho)
+
 
 function tamanho() {
     paleta.innerHTML = '';
@@ -77,10 +77,19 @@ function tamanho() {
       paletasDeCores(50);
     } else if (inputs.value < 5) {
       paletasDeCores(5);
-    } else if (inputs.value === 0) {
-        alert('Board inválido!');
     }
   }
+  btnVqv.addEventListener('click', tamanho)
+
+function invalido() {
+    if (inputs.value) {
+      tamanho();
+    } else {
+      return alert('Board inválido!');
+    }
+  }
+
+btnVqv.addEventListener('click', invalido)
 
 
 window.onload = function () {
