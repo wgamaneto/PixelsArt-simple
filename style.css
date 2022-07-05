@@ -24,17 +24,6 @@ body {
   background-color: black;
 }
 
-#azul {
-  background-color: blue;
-}
-
-#vermelho {
-  background-color: red;
-}
-
-#verde {
-  background-color: green;
-}
 
 #clear-board {
   padding-top: 30px;
@@ -56,8 +45,7 @@ body {
 
 #pixel-board {
   margin-top: 30px;
-  margin-bottom: 50px;
-  font-size: 0;
+  font-size: 10px;
 }
 
 .pixel {

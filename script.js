@@ -46,9 +46,11 @@ for (let index = 0; index < colors.length; index += 1) {
     colors[index].addEventListener('click', escolhido);
 }
 
+let corRandom = `${'rgb' + '('}${Math.floor(Math.random() * 255)}`
+console.log(corRandom);
 
 colors[0].style.backgroundColor = 'black';
-colors[1].style.backgroundColor = 'blue';
+colors[1].style.backgroundColor = 'blue'
 colors[2].style.backgroundColor = 'red';
 colors[3].style.backgroundColor = 'green';
 
