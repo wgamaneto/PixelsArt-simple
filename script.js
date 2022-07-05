@@ -1,16 +1,12 @@
-window.onload = function () {
-    let preto = document.getElementById('preto');
-    preto.className = 'color selected';
-}
-
 const paleta = document.getElementById('pixel-board');
+const inputs = document.getElementById('board-size');
+const btnVqv = document.getElementById('generate-board')
 
-
-function paletasDeCores() {
-    for (let index = 0; index < 5; index += 1) {
+function paletasDeCores(valor) {
+    for (let index = 0; index < valor; index += 1) {
         let quadradinhos = document.createElement('div');
         paleta.appendChild(quadradinhos);
-        for (let index = 0; index < 5; index += 1) {
+        for (let index = 0; index < valor; index += 1) {
             let quadrados = document.createElement('div');
             quadrados.className = 'pixel';
             quadrados.addEventListener('click', pintar);
@@ -18,7 +14,9 @@ function paletasDeCores() {
         }
     }
 }
-paletasDeCores();
+paletasDeCores(5);
+
+
 
 
 function pintar(event) {
@@ -61,6 +59,7 @@ console.log(corRandom);
 
 let px = document.getElementsByClassName('pixel');
 let limpar = document.getElementById('clear-board');
+
 function clearBoard() {
     for (let index = 0; index < px.length; index += 1) {
         px[index].style.backgroundColor = 'white';
@@ -68,7 +67,25 @@ function clearBoard() {
 }
 limpar.addEventListener('click', clearBoard); 
 
-let botaoVqv = document.getElementById('generate-board')
+btnVqv.addEventListener('click', tamanho)
 
-entrada.addEventListener('click', function(event) {
-})
+function tamanho() {
+    paleta.innerHTML = '';
+    if (inputs.value >= 5 && inputs.value <= 50) {
+      paletasDeCores(inputs.value);
+    } else if (inputs.value > 50) {
+      paletasDeCores(50);
+    } else if (inputs.value < 5) {
+      paletasDeCores(5);
+    }
+    else {
+         alert(!'Board inválido!');
+      }
+  }
+
+
+
+window.onload = function () {
+    let preto = document.getElementById('preto');
+    preto.className = 'color selected';
+}
