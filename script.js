@@ -20,6 +20,7 @@ function paletasDeCores() {
 }
 paletasDeCores();
 
+
 function pintar(event) {
     let selectedColor;
     for (let index in colors) {
@@ -58,9 +59,6 @@ for (let index = 0; index < colors.length; index += 1) {
 let corRandom = (Math.floor(Math.random() * 255))
 console.log(corRandom);
 
-
-
-
 let px = document.getElementsByClassName('pixel');
 let limpar = document.getElementById('clear-board');
 function clearBoard() {
@@ -69,3 +67,8 @@ function clearBoard() {
     }
 }
 limpar.addEventListener('click', clearBoard); 
+
+let botaoVqv = document.getElementById('generate-board')
+
+entrada.addEventListener('click', function(event) {
+})
