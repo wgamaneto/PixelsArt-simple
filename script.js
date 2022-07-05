@@ -77,12 +77,10 @@ function tamanho() {
       paletasDeCores(50);
     } else if (inputs.value < 5) {
       paletasDeCores(5);
+    } else if (inputs.value === 0) {
+        alert('Board inválido!');
     }
-    else {
-         alert(!'Board inválido!');
-      }
   }
-
 
 
 window.onload = function () {
